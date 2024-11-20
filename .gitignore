@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+venv/
+
+# IDE
+.vscode/
+.idea/
+
+# Data
+data/*.csv
+*.log
+
+# Compiled contracts
+contracts/build/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# TODO: add .env to gitignore after moving secrets to vault
+# .env
+# .env.production
