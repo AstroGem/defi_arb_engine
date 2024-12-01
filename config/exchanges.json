@@ -1,0 +1,27 @@
+{
+  "binance": {
+    "api_key": "vmPUZE6mv9SD5VNHk4HlWFsOr6aKE2zvsw0MuIgwCIPy6utIco14y7Ju91duEh8A",
+    "api_secret": "NhqPtmdSJYdKjVHjA7PZj4Mge3R5YNiP1e3UZjInClVN65XAbvqqM6A7H5fATj0j",
+    "testnet": false,
+    "rate_limit": 1200,
+    "withdraw_enabled": true,
+    "default_withdraw_address": "0x9c2B4e8f1D3a6C7b0E5F8d2A4c6B9e1F3d5A7c0B"
+  },
+  "coinbase": {
+    "api_key": "ndax9fhn2ka",
+    "api_secret": "GvZbBQ5YhSxKz9fV3JYwTn1cDe4RbWp8",
+    "passphrase": "my-secure-passphrase-2024",
+    "sandbox": false
+  },
+  "kraken": {
+    "api_key": "kQH5HW/8p1uGOVjbgWA7FunAmGO8lsSUXNsu3eow76sz84Q18fWxnyRzBHCd3pd5nJPDUg2MEQ2Nqp",
+    "api_secret": "kNPhL+6z/ZOFyR9hv3r2dHiPLjSWBQJ7zzaIHhMYCPCzNE2M0bk8n1uf8kOykaGy+7rGpRNZhR7i",
+    "tier": "intermediate"
+  },
+  "kucoin": {
+    "api_key": "61e23ad48c3b5d000197a1a0",
+    "api_secret": "e4e8c0b5-7a3f-4d2e-9c1b-0a8f6e5d4c3b",
+    "passphrase": "KuC0in_Tr4de_2024!",
+    "sandbox": false
+  }
+}

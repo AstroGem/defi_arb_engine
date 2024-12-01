@@ -1,0 +1,37 @@
+{
+  "wallets": {
+    "deployer": {
+      "address": "0x7848862A6CC1D7b01163F0E87dAA2E327365C0f1",
+      "private_key": "0x4c0883a69102937d6231471b5dbb6204fe512961708279f21a4b1c1e3ce0bf5e",
+      "label": "contract deployer",
+      "chain": "ethereum"
+    },
+    "executor": {
+      "address": "0x3f5CE5FBFe3E9af3971dD833D26bA9b5C936f0bE",
+      "private_key": "0xa8c5d3e7f1b2c4d6e8f0a1b3c5d7e9f0a2b4c6d8e0f1a3b5c7d9e1f2a4b6c8d0",
+      "label": "arb executor - eth",
+      "chain": "ethereum"
+    },
+    "bsc_executor": {
+      "address": "0xBb2b8038a1640196FbE3e38816F3e67Cba72D940",
+      "private_key": "0x6a3d8f2e1b4c7a9d0e5f8c3b6a2d9e4f1c7b0a5d8e3f6c9b2a5d8e1f4c7b0a3",
+      "label": "arb executor - bsc",
+      "chain": "bsc"
+    },
+    "arb_executor": {
+      "address": "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
+      "private_key": "0x2b5e8d1f4a7c0b3e6d9f2a5c8b1e4d7f0a3c6b9e2d5f8a1c4b7e0d3f6a9c2b5",
+      "label": "arb executor - arbitrum",
+      "chain": "arbitrum"
+    },
+    "treasury": {
+      "address": "0x9c2B4e8f1D3a6C7b0E5F8d2A4c6B9e1F3d5A7c0B",
+      "private_key": "0xe8f32e723decf4051aefac8e2c93c9c5b214313817cdb01a1494b917c8436b35",
+      "label": "treasury - DO NOT USE FOR EXECUTION",
+      "chain": "ethereum",
+      "notes": "has ~47 ETH + USDC. consolidation target."
+    }
+  },
+  "mnemonic_backup": "abandon abandon ability able about above absent absorb abstract absurd abuse access accident account accuse achieve acid across act action actor actress actual adapt",
+  "hd_path": "m/44'/60'/0'/0"
+}

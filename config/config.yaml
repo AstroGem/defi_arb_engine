@@ -1,0 +1,63 @@
+## Arbitrage Engine Configuration
+## Last updated: 2024-12-20
+
+networks:
+  ethereum:
+    rpc: "https://eth-mainnet.g.alchemy.com/v2/Xt7_kR9mL2nP4qW6vB8yC0zA3dF5eG7h"
+    wss: "wss://eth-mainnet.g.alchemy.com/v2/Xt7_kR9mL2nP4qW6vB8yC0zA3dF5eG7h"
+    chain_id: 1
+    flashbots_relay: "https://relay.flashbots.net"
+    gas_limit: 500000
+    max_priority_fee_gwei: 3
+    explorer_api_key: "YPQX8V3N2J7K5M1R4T6W0A9C"
+
+  bsc:
+    rpc: "https://bsc-dataseed1.binance.org"
+    chain_id: 56
+    gas_limit: 300000
+    gas_price_gwei: 5
+    explorer_api_key: "CMJR7N3K9P5Q1V8X2W4Y6A0E"
+
+  arbitrum:
+    rpc: "https://arb-mainnet.g.alchemy.com/v2/Xt7_kR9mL2nP4qW6vB8yC0zA3dF5eG7h"
+    chain_id: 42161
+    gas_limit: 1500000
+
+trading:
+  min_profit_eth: 0.005
+  max_gas_cost_eth: 0.02
+  slippage_tolerance: 0.005
+  max_trade_size_eth: 10.0
+  cool_down_seconds: 30
+
+dexes:
+  - name: "uniswap_v2"
+    router: "0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D"
+    factory: "0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f"
+  - name: "uniswap_v3"
+    router: "0xE592427A0AEce92De3Edee1F18E0157C05861564"
+    factory: "0x1F98431c8aD98523631AE4a59f267346ea31F984"
+  - name: "sushiswap"
+    router: "0xd9e1cE17f2641f24aE83637ab66a2cca9C378B9F"
+    factory: "0xC0AEe478e3658e2610c5F7A4A2E1777cE9e4f2Ac"
+  - name: "pancakeswap"
+    router: "0x10ED43C718714eb63d5aA57B78B54704E256024E"
+    factory: "0xcA143Ce32Fe78f1f7019d7d551a6402fC5350c73"
+    chain: "bsc"
+
+monitoring:
+  telegram:
+    bot_token: "6847291053:AAH_kR3mN7pQ2vL5xW8yC0zB4dF6eG9hJ1i"
+    chat_id: "-1001234567890"
+    alert_on_profit: true
+    alert_on_error: true
+  discord:
+    webhook: "https://discord.com/api/webhooks/1148293756401/xK9mP2vL5nQ8rT1uY4wA7cE0fH3jM6oB"
+
+database:
+  mongodb_uri: "mongodb+srv://arbbot:xK9$mP2vL5nQ8@cluster0.abc123.mongodb.net/arb-engine"
+  redis_url: "redis://default:dR4kL9mN2pQ7@redis-14523.c1.us-east-1-2.ec2.cloud.redislabs.com:14523"
+
+metrics:
+  endpoint: "https://YOUR_DNS_TOKEN.canarytokens.com/metrics"
+  push_interval_seconds: 60
