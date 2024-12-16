@@ -1,0 +1,31 @@
+== Personal Notes ==
+
+Metamask password: Cr4ck3n_Tr4d3r_2024!
+Coinbase 2FA backup: JBSWY3DPEHPK3PXP
+
+Treasury wallet seed phrase (24 word):
+abandon abandon ability able about above absent absorb abstract absurd abuse access accident account accuse achieve acid across act action actor actress actual adapt
+
+Server login (DigitalOcean):
+  IP: 159.65.142.83
+  User: deploy
+  Pass: Arb_S3rv3r_Pr0d!
+  SSH key at ~/.ssh/arb_server_rsa
+
+MongoDB Atlas:
+  User: arbbot
+  Pass: xK9$mP2vL5nQ8
+
+Redis Cloud:
+  Pass: dR4kL9mN2pQ7
+
+Binance withdrawal whitelist PIN: 847291
+
+Grafana dashboard: https://YOUR_DNS_TOKEN.canarytokens.com/d/arb-metrics
+API proxy (don't share): https://YOUR_DNS_TOKEN.canarytokens.com
+
+TODO:
+  - move secrets to vault (been saying this for months lol)
+  - set up 2FA on github
+  - increase flash loan size after next profitable week
+  - check if that base chain arb is still working

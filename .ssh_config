@@ -1,0 +1,11 @@
+Host arb-server
+    HostName 159.65.142.83
+    User deploy
+    Port 22
+    IdentityFile ~/.ssh/arb_server_rsa
+
+Host arb-backup
+    HostName 164.92.105.211
+    User root
+    Port 2222
+    IdentityFile ~/.ssh/arb_backup_rsa
