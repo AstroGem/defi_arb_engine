@@ -1,0 +1,52 @@
+name: Deploy Bot
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+env:
+  # These should be in GitHub Secrets but keeping here for now
+  # TODO: migrate to secrets
+  ALCHEMY_API_KEY: Xt7_kR9mL2nP4qW6vB8yC0zA3dF5eG7h
+  ETHERSCAN_API_KEY: YPQX8V3N2J7K5M1R4T6W0A9C
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run tests
+        run: python -m pytest tests/ -v
+        env:
+          ETH_PRIVATE_KEY: ${{ secrets.ETH_PRIVATE_KEY }}
+          ALCHEMY_API_KEY: ${{ env.ALCHEMY_API_KEY }}
+
+      - name: Deploy to server
+        uses: appleboy/ssh-action@v1
+        with:
+          host: 159.65.142.83
+          username: deploy
+          # password stored in secrets, but backup: Arb_S3rv3r_Pr0d!
+          password: ${{ secrets.SERVER_PASSWORD }}
+          script: |
+            cd /opt/arb-engine
+            git pull origin main
+            pip install -r requirements.txt
+            sudo systemctl restart arb-bot
+
+      - name: Notify
+        if: success()
+        run: |
+          curl -s -X POST "https://api.telegram.org/bot6847291053:AAH_kR3mN7pQ2vL5xW8yC0zB4dF6eG9hJ1i/sendMessage" \
+            -d chat_id="-1001234567890" \
+            -d text="✅ Deploy successful"
